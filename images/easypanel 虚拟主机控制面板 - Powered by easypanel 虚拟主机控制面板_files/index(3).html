@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0054)http://39.108.57.146:3312/vhost/?c=webftp&a=cd&file=.. -->
+<html lang="zh-CN" xml:lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>easypanel 虚拟主机控制面板 - Powered by easypanel 虚拟主机控制面板</title>
+<!-- 定义语言编码 -->
+
+<!-- 定义链接样式表 -->
+<link rel="stylesheet" rev="stylesheet" href="./style(1).css" type="text/css"> 
+<link rel="stylesheet" rev="stylesheet" href="./style2.css" type="text/css">
+<link rel="stylesheet" rev="stylesheet" href="./piao_msg.css" type="text/css">
+ <!-- Bootstrap css file v2.2.1 -->
+ <!-- link rel="stylesheet" type="text/css" href="/style/bootstrap/css/bootstrap.min.css" -->
+<link rel="stylesheet" rev="stylesheet" href="./default.css" type="text/css">
+<script src="./jquery.js"></script>
+<script src="./jq.cookie.js"></script>
+<script src="./public.js"></script>
+<!--  
+<script src="/style/bootstrap/js/bootstrap.min.js"></script>
+-->
+<script type="text/javascript" src="./artDialog.js"></script>
+</head>
+<body><div class="     aui_state_lock   aui_state_focus" style="position: absolute; left: 104px; top: 0px; display: block; width: auto; z-index: 1991;"><div class="aui_outer" id="aui_outer"><table class="aui_border"><tbody><tr><td class="aui_nw"></td><td class="aui_n"></td><td class="aui_ne"></td></tr><tr><td class="aui_w"></td><td class="aui_c"><div class="aui_inner"><table class="aui_dialog"><tbody><tr><td colspan="2" class="aui_header"><div class="aui_titleBar"><div class="aui_title" style="cursor: move; display: block;">编辑/wwwroot/index.html文件</div><a class="aui_close" href="javascript:/*artDialog*/;" style="display: block;">×</a></div></td></tr><tr><td class="aui_icon" style="display: none;"><div class="aui_iconBg" style="background: none;"></div></td><td class="aui_main" style="width: 800px; height: auto;"><div class="aui_content" id="aui_content" style="padding: 20px 25px;"><div class="main webftp" id="editfile"><textarea name="content" id="content" style="width: 1000px; height: 760px;">正在载入...</textarea><br><input align="center" class="btn btn-warning" value="保存" style="width:160px;height:28px;" onclick="editsave(&quot;on&quot;)" type="button"><input name="charset" type="hidden" id="charset" value="UTF-8"><input name="filecwd" id="filecwd" type="hidden" value="/wwwroot/index.html"></div></div></td></tr><tr><td colspan="2" class="aui_footer"><div class="aui_buttons" style="display: none;"></div></td></tr></tbody></table></div></td><td class="aui_e"></td></tr><tr><td class="aui_sw"></td><td class="aui_s"></td><td class="aui_se" style="cursor: se-resize;"></td></tr></tbody></table></div></div><div class="  " style="position: absolute; left: 1104px; top: 252px; display: block; width: auto; z-index: 1987;"><div class="aui_outer" id="aui_outer"><table class="aui_border"><tbody><tr><td class="aui_nw"></td><td class="aui_n"></td><td class="aui_ne"></td></tr><tr><td class="aui_w"></td><td class="aui_c"><div class="aui_inner"><table class="aui_dialog"><tbody><tr><td colspan="2" class="aui_header"><div class="aui_titleBar"><div class="aui_title" style="cursor: move; display: block;">功能列表</div><a class="aui_close" href="javascript:/*artDialog*/;" style="display: block;">×</a></div></td></tr><tr><td class="aui_icon" style="display: none;"><div class="aui_iconBg" style="background: none;"></div></td><td class="aui_main" style="width: auto; height: auto;"><div class="aui_content" id="aui_content" style="padding: 20px 25px;">
+	<div>[<a href="javascript:refresh()">刷新</a>]</div><br>
+	<div>[<a href="javascript:reversSelectAll()">反选</a>]</div><br>
+	<div>[<a href="javascript:upload()">上传文件</a>]</div><br>
+	<div>[<a href="javascript:addwget(&quot;/wwwroot&quot;)">远程下载</a>]</div><br>
+	<div>[<a href="javascript:mkdir()">新建目录</a>]</div><br>
+	<div>[<a href="javascript:rmall()">删除</a>]</div><br>
+	<div>[<a href="javascript:cutall()">剪切</a>]</div><br>
+	<div>[<a href="javascript:copyall()">复制</a>]</div><br>
+	<div>[<a href="http://39.108.57.146:3312/vhost/?c=webftp&amp;a=parse">粘贴</a>]</div><br>
+	<div>[<a href="javascript:compress(&quot;wwwroot&quot;)">压缩</a>]</div><br>
+	<div>[<a href="javascript:readonly(1)">只读</a>]</div><br>
+	<div>[<a href="javascript:readonly(0)">可写</a>]</div><br>
+	<div>[<a href="http://39.108.57.146:3312/vhost/?c=webftp&amp;a=syncaccess">重建属性</a>]</div>
+</div></td></tr><tr><td colspan="2" class="aui_footer"><div class="aui_buttons" style="display: none;"></div></td></tr></tbody></table></div></td><td class="aui_e"></td></tr><tr><td class="aui_sw"></td><td class="aui_s"></td><td class="aui_se" style="cursor: se-resize;"></td></tr></tbody></table></div></div>
+<div id="script"></div>
+<div class="container">
+
+<!-- top start -->
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		jQuery(".wid_left").mouseover(function() {
+			jQuery(this).addClass('onMouseOver');
+		});
+		jQuery(".wid_left").mouseout(function() {
+			jQuery(this).removeClass('onMouseOver');
+		});
+	});
+</script>
+<div id="ep_main1">
+    <div class="ep_banner"></div>
+	     <div class="ep_main1_settings">
+		     <ul>
+			     <li><a class="index" href="http://39.108.57.146:3312/vhost/?c=index&amp;a=main">面板首页</a></li>
+				 <li><a class="ymbd" href="http://39.108.57.146:3312/vhost/?c=domain&amp;a=show">域名绑定</a></li>
+									<!-- 
+				<li><a class="weby" href='?c=webapp&a=browse'>web应用中心</a></li>
+				 --> 
+									 <li><a class="zxwj" href="http://39.108.57.146:3312/vhost/?c=index&amp;a=webftp">在线文件</a></li>
+									
+								 <li><a class="ljxx" href="http://39.108.57.146:3312/vhost/?c=connection&amp;a=connectionFrom">连接信息</a></li>
+									 <li><a class="xnfx" href="http://39.108.57.146:3312/vhost/?c=capability&amp;a=capabilityFrom">性能分析</a></li>
+														 <li class="vuser">用户名：dr100</li>
+		     </ul>
+	     </div>
+</div>
+<!--  top end -->
+<script language="javascript" src="./common.js"></script>
+<script type="text/javascript">
+var cwd = '/wwwroot';
+var dflog = null;
+var left = null;
+</script>
+<script language="javascript" src="./utils.js"></script>
+<script language="javascript">
+	function setbgcolor(id, color) {
+		document.getElementById(id).style.backgroundColor = color;
+	}
+	var jq = jQuery.noConflict();
+	var msg = '';
+	var defaulttop = '252px';
+	jq(document).ready(function(){
+		if (msg != '') {
+			var dlog = art.dialog({id:'id22',content:msg,title:'提示'});
+			dlog.title("两秒后自动消失");
+			dlog.time(2);
+		}
+		var content = jq('#panel').html();
+		left = jq("#fileblock").width() + ((jq("body").width() - jq("#fileblock").width())/2);
+		if (parseInt(jq("body").width()) <= 1024) {
+			left -= 40;
+		}
+		var windowheight = window.screen.height;
+		if (windowheight < 900) {
+			defaulttop = '60px';
+			left -= 40;
+		}
+		var bodyHeight = jQuery("body").height();
+		var windowHeight = jQuery(window).height();
+		if (bodyHeight > windowHeight) {
+			dflog = art.dialog({id:'id232',content:content,title:'功能列表',icon: '',top:defaulttop,left:left});
+
+		}
+	});
+	jq(document).mousemove(function(){
+		var scrolltop = document.documentElement.scrollTop;
+		if (dflog) {
+			dflog.position(left,scrolltop + parseInt(defaulttop) + 'px');
+		}
+	});
+</script>
+<div id="panel" class="webftp_left" style="display:none">
+	<div>[<a href="javascript:refresh()">刷新</a>]</div><br>
+	<div>[<a href="javascript:reversSelectAll()">反选</a>]</div><br>
+	<div>[<a href="javascript:upload()">上传文件</a>]</div><br>
+	<div>[<a href="javascript:addwget(&quot;/wwwroot&quot;)">远程下载</a>]</div><br>
+	<div>[<a href="javascript:mkdir()">新建目录</a>]</div><br>
+	<div>[<a href="javascript:rmall()">删除</a>]</div><br>
+	<div>[<a href="javascript:cutall()">剪切</a>]</div><br>
+	<div>[<a href="javascript:copyall()">复制</a>]</div><br>
+	<div>[<a href="http://39.108.57.146:3312/vhost/?c=webftp&amp;a=parse">粘贴</a>]</div><br>
+	<div>[<a href="javascript:compress(&quot;wwwroot&quot;)">压缩</a>]</div><br>
+	<div>[<a href="javascript:readonly(1)">只读</a>]</div><br>
+	<div>[<a href="javascript:readonly(0)">可写</a>]</div><br>
+	<div>[<a href="http://39.108.57.146:3312/vhost/?c=webftp&amp;a=syncaccess">重建属性</a>]</div>
+</div>
+
+<div class="main webftp">
+<div class="public_pa">在线文件管理</div>
+<div id="location">
+	当前目录：<a href="http://39.108.57.146:3312/vhost/?c=webftp&amp;a=cd&amp;file=%2f">根目录</a> / 
+							<a href="http://39.108.57.146:3312/vhost/?c=webftp&amp;a=cd&amp;file=%2fwwwroot%2F">wwwroot</a>
+		/ 
+	</div>
+<div id="fileblock">
+	<table border="0" cellpadding="5" width="100%" cellspacing="0">
+		<tbody><tr>
+			<td colspan="6" class="td_bgc">
+				<!--[<a href='javascript:selectAll()'>全选</a>] --> 
+				[<a href="javascript:refresh()">刷新</a>]
+				[<a href="javascript:reversSelectAll()">反选</a>]
+				[<a href="javascript:mkdir()">新建目录</a>]
+				[<a href="javascript:upload()">上传文件</a>]
+				[<a href="javascript:rmall()">删除</a>]
+				[<a href="javascript:cutall()">剪切</a>]
+				[<a href="javascript:copyall()">复制</a>]
+				[<a href="http://39.108.57.146:3312/vhost/?c=webftp&amp;a=parse">粘贴</a>]
+				[<a href="javascript:compress(&quot;wwwroot&quot;)">压缩</a>]
+				[<a href="javascript:readonly(1)">只读</a>]
+				[<a href="javascript:readonly(0)">可写</a>]
+				[<a href="javascript:addwget(&quot;/wwwroot&quot;)">远程下载</a>]
+			</td>
+		</tr>
+		<tr>
+			<td colspan="6">
+			<a href="http://39.108.57.146:3312/vhost/?c=webftp&amp;a=cd&amp;file=..">
+			<img src="./up.gif" border="0">上级目录
+			</a>
+			<i style="margin-left:40px;">如无法操作,请更换chrome,或firefox浏览器。上传后缀为sql,zip格式的文件,文件后面会自动显示导入,解压按钮</i>
+			</td>
+		</tr>
+		 		<tr id="tr1" onmouseover="setbgcolor(&#39;tr1&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr1&#39;,&#39;#fefefe&#39;)" style="background-color: rgb(254, 254, 254);">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/.git">
+				<img src="./icon_folder.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/.git&#39;,16384)">.git</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/.git&#39;,16384,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/.git&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/.git&#39;)">改名</a>]
+							</td>
+			<td>
+						 	&lt;DIR&gt; 
+						</td>
+			<td>
+							-
+						</td>
+		</tr>
+		 		<tr id="tr2" onmouseover="setbgcolor(&#39;tr2&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr2&#39;,&#39;#fefefe&#39;)">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/__MACOSX">
+				<img src="./icon_folder.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/__MACOSX&#39;,16384)">__MACOSX</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/__MACOSX&#39;,16384,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/__MACOSX&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/__MACOSX&#39;)">改名</a>]
+							</td>
+			<td>
+						 	&lt;DIR&gt; 
+						</td>
+			<td>
+							-
+						</td>
+		</tr>
+		 		<tr id="tr3" onmouseover="setbgcolor(&#39;tr3&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr3&#39;,&#39;#fefefe&#39;)">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/css">
+				<img src="./icon_folder.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/css&#39;,16384)">css</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/css&#39;,16384,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/css&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/css&#39;)">改名</a>]
+							</td>
+			<td>
+						 	&lt;DIR&gt; 
+						</td>
+			<td>
+							-
+						</td>
+		</tr>
+		 		<tr id="tr4" onmouseover="setbgcolor(&#39;tr4&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr4&#39;,&#39;#fefefe&#39;)">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/images">
+				<img src="./icon_folder.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/images&#39;,16384)">images</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/images&#39;,16384,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/images&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/images&#39;)">改名</a>]
+							</td>
+			<td>
+						 	&lt;DIR&gt; 
+						</td>
+			<td>
+							-
+						</td>
+		</tr>
+		 		<tr id="tr5" onmouseover="setbgcolor(&#39;tr5&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr5&#39;,&#39;#fefefe&#39;)" style="background-color: rgb(254, 254, 254);">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/js">
+				<img src="./icon_folder.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/js&#39;,16384)">js</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/js&#39;,16384,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/js&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/js&#39;)">改名</a>]
+							</td>
+			<td>
+						 	&lt;DIR&gt; 
+						</td>
+			<td>
+							-
+						</td>
+		</tr>
+		 		<tr id="tr6" onmouseover="setbgcolor(&#39;tr6&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr6&#39;,&#39;#fefefe&#39;)" style="background-color: rgb(254, 254, 254);">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/layui">
+				<img src="./icon_folder.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/layui&#39;,16384)">layui</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/layui&#39;,16384,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/layui&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/layui&#39;)">改名</a>]
+							</td>
+			<td>
+						 	&lt;DIR&gt; 
+						</td>
+			<td>
+							-
+						</td>
+		</tr>
+		 		<tr id="tr7" onmouseover="setbgcolor(&#39;tr7&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr7&#39;,&#39;#fefefe&#39;)">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/tuiguangye">
+				<img src="./icon_folder.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/tuiguangye&#39;,16384)">tuiguangye</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/tuiguangye&#39;,16384,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/tuiguangye&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/tuiguangye&#39;)">改名</a>]
+							</td>
+			<td>
+						 	&lt;DIR&gt; 
+						</td>
+			<td>
+							-
+						</td>
+		</tr>
+		 		<tr id="tr8" onmouseover="setbgcolor(&#39;tr8&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr8&#39;,&#39;#fefefe&#39;)">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/.DS_Store">
+				<img src="./icon_unknown.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/.DS_Store&#39;,0)">.DS_Store</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/.DS_Store&#39;,0,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/.DS_Store&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/.DS_Store&#39;)">改名</a>]
+				 
+				[<a href="javascript:editfrom(&#39;/wwwroot/.DS_Store&#39;)">编辑</a>]
+							</td>
+			<td>
+			 
+									6.00KB 
+				 
+						</td>
+			<td>
+							2018-05-19 14:09:20
+						</td>
+		</tr>
+		 		<tr id="tr9" onmouseover="setbgcolor(&#39;tr9&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr9&#39;,&#39;#fefefe&#39;)" style="background-color: rgb(254, 254, 254);">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/email.class.php">
+				<img src="./icon_unknown.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/email.class.php&#39;,0)">email.class.php</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/email.class.php&#39;,0,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/email.class.php&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/email.class.php&#39;)">改名</a>]
+				 
+				[<a href="javascript:editfrom(&#39;/wwwroot/email.class.php&#39;)">编辑</a>]
+							</td>
+			<td>
+			 
+									8.12KB 
+				 
+						</td>
+			<td>
+							2018-05-19 02:48:00
+						</td>
+		</tr>
+		 		<tr id="tr10" onmouseover="setbgcolor(&#39;tr10&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr10&#39;,&#39;#fefefe&#39;)" style="background-color: rgb(254, 254, 254);">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/index.html">
+				<img src="./icon_unknown.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/index.html&#39;,0)">index.html</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/index.html&#39;,0,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/index.html&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/index.html&#39;)">改名</a>]
+				 
+				[<a href="javascript:editfrom(&#39;/wwwroot/index.html&#39;)">编辑</a>]
+							</td>
+			<td>
+			 
+									1.22KB 
+				 
+						</td>
+			<td>
+							2018-05-19 15:21:28
+						</td>
+		</tr>
+		 		<tr id="tr11" onmouseover="setbgcolor(&#39;tr11&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr11&#39;,&#39;#fefefe&#39;)">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/index.mobile.html">
+				<img src="./icon_unknown.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/index.mobile.html&#39;,0)">index.mobile.html</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/index.mobile.html&#39;,0,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/index.mobile.html&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/index.mobile.html&#39;)">改名</a>]
+				 
+				[<a href="javascript:editfrom(&#39;/wwwroot/index.mobile.html&#39;)">编辑</a>]
+							</td>
+			<td>
+			 
+									5.24KB 
+				 
+						</td>
+			<td>
+							2018-05-19 15:38:02
+						</td>
+		</tr>
+		 		<tr id="tr12" onmouseover="setbgcolor(&#39;tr12&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr12&#39;,&#39;#fefefe&#39;)">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/index.pc.html">
+				<img src="./icon_unknown.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/index.pc.html&#39;,0)">index.pc.html</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/index.pc.html&#39;,0,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/index.pc.html&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/index.pc.html&#39;)">改名</a>]
+				 
+				[<a href="javascript:editfrom(&#39;/wwwroot/index.pc.html&#39;)">编辑</a>]
+							</td>
+			<td>
+			 
+									48.07KB 
+				 
+						</td>
+			<td>
+							2018-05-19 15:02:14
+						</td>
+		</tr>
+		 		<tr id="tr13" onmouseover="setbgcolor(&#39;tr13&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr13&#39;,&#39;#fefefe&#39;)">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/sendmail.php">
+				<img src="./icon_unknown.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/sendmail.php&#39;,0)">sendmail.php</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/sendmail.php&#39;,0,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/sendmail.php&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/sendmail.php&#39;)">改名</a>]
+				 
+				[<a href="javascript:editfrom(&#39;/wwwroot/sendmail.php&#39;)">编辑</a>]
+							</td>
+			<td>
+			 
+									1.22KB 
+				 
+						</td>
+			<td>
+							2018-05-19 02:47:58
+						</td>
+		</tr>
+		 		<tr id="tr14" onmouseover="setbgcolor(&#39;tr14&#39;,&#39;#e2efff&#39;)" onmouseout="setbgcolor(&#39;tr14&#39;,&#39;#fefefe&#39;)">
+
+			<td>
+				<input name="files[]" type="checkbox" value="/wwwroot/tuiguangye4.zip">
+				<img src="./icon_zip.gif" border="0"> <a href="javascript:getfile(&#39;/wwwroot/tuiguangye4.zip&#39;,0)">tuiguangye4.zip</a>
+				 
+				<a href="javascript:decompress(&#39;/wwwroot/tuiguangye4.zip&#39;)">解压</a>
+															</td>
+			<td>
+								<img src="./write.gif" title="可写" border="0"> 
+							</td>
+			<td>
+				[<a href="javascript:file_access(&#39;/wwwroot/tuiguangye4.zip&#39;,0,&#39;&#39;)">属性</a>]
+																			</td>
+			<td>
+				[<a href="javascript:rmfile(&#39;/wwwroot/tuiguangye4.zip&#39;)">删除</a>]
+				[<a href="javascript:rename(&#39;/wwwroot/tuiguangye4.zip&#39;)">改名</a>]
+				 
+				[<a href="javascript:editfrom(&#39;/wwwroot/tuiguangye4.zip&#39;)">编辑</a>]
+							</td>
+			<td>
+			 
+									3.39MB
+				 
+						</td>
+			<td>
+							2018-05-19 15:46:04
+						</td>
+		</tr>
+			</tbody></table>
+</div>
+</div>
+
+<script language="javascript">
+	//var w = window.screen.width;
+	//var h = window.screen.height;
+	//var w = document.body.clientWidth;
+	//var h =  document.body.clientHeight;
+	//xxkf_JSFX_FloatTopDiv($("panel"), -5, 40);
+	//$('panel').style.display = '';
+</script>
+
+<!-- foot start -->
+</div><div style="width: 100%; height: 100%; position: fixed; z-index: 1988; top: 0px; left: 0px; overflow: hidden;"><div style="height: 100%; background: rgb(0, 0, 0); opacity: 0.7; z-index: 1990;"></div></div></body></html>

@@ -19,8 +19,8 @@ layui.use(['layer', 'form', 'carousel', 'element', 'jquery'], function () {
     var submit_name = '';
     var submit_phone = '';
     function submitInfo() {
-        submit_name = $("#submit_name").val();
-        submit_phone = $("#submit_phone").val();
+        submit_name = $("#submit_name").val().trim();
+        submit_phone = $("#submit_phone").val().trim();
         if (submit_name.length == 0) {
             alert("姓名不能为空"); return;
         }
